@@ -4,3 +4,4 @@ Pick some subset of the information covered in your annual review article that y
 
 Identify the scope of your user guide - what will you cover? Specific software packages? When to use or not to use a specific technique?
 
+I want to cover bias in actuarial models, in the context of how systematic pricing bias shows up in insurance products. The guide would go over how to identify and test bias in models, different methods of fix/manage the bias. I might try to tie in handling and cleaning the data models are built on and assessing data quality. All of this guide would be using R, and maybe Python companion if time allows it. 
