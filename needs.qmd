@@ -1,9 +1,13 @@
 # Needs Assessment {.appendix}
 
-What does someone trying to accomplish your chosen task need help with? 
+What does someone trying to accomplish your chosen task need help with?
 
-What parts are likely to be tricky? 
+I assume that someone accomplishing my task already has a model, but I want to provide a section in my guide to make sure they understand what the model means and how to use it. They would also need help with assessing bias and the methods needed to address bias in the model.
+
+What parts are likely to be tricky?
+
+There are some forms of bias that are very unique to each situation, because you have to consider the predictors in the model. I can walk them through steps of analyzing their model, but it does take some careful consideration from the reader about the implications of their model. There is no general test to see if an insurance or pricing model is biased, but we can check specific aspects in the data and see how it performs in the model. A huge part of knowing a model's quality is to test it as much as possible.
 
 What resources are already available on this topic that may be helpful? Look for e.g. software vignettes, package documentation, papers about software packages, and so on.
 
-
+There is a r package "fairness" and "glmnet" that will be very useful, as well as "ggplot" for visualization. I will probably also use "dplyr", but I would lean on an assumption that someone working with models and large data has seen "ggplot" and "dplyr". I think I would like to create a model from simulated data and purposefully introduce bias into it. Then I can walk through the steps of checking the model and provide an example. I also found a very good article I will reference for the user guide called The Actuarial View of Data Bias @ActuarialViewData. This will be very helpful for me to explain different kinds of bias and the "big picture" of why we are about bias. I will definitely also defer readers to this article for a more in-depth understanding.

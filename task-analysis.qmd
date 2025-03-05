@@ -1,27 +1,42 @@
-
 # Task Analysis {.appendix}
 
-Here are some questions to guide you through the process of doing a task analysis. You don't have to specifically answer each one of these (and some may not apply), but they should get you started thinking in the right direction. 
+**Here are some questions to guide you through the process of doing a task analysis. You don't have to specifically answer each one of these (and some may not apply), but they should get you started thinking in the right direction.**
 
-What are the prerequisites, for both knowledge and e.g. software setup? 
+**What are the prerequisites, for both knowledge and e.g. software setup?**
 
-What are the basic requirements for any data that the method is used on? 
-  - Are missing values allowed? 
-  - Should the data be confined within a certain range? 
-  - Does the data have to be approximately normally distributed? 
+I assume basic skills with data handling and that the reader is walking in with a model. This means having basic understanding of how linear models are fitted, and since this guide is explicitly coded in R, I assume they made have some familiarity with the base software.
 
-What are the basic components of the task?
-  - Outline these in a bit more detail
+**What are the basic requirements for any data that the method is used on? - Are missing values allowed? - Should the data be confined within a certain range? - Does the data have to be approximately normally distributed?**
 
+I assume that the model was built on sufficiently large data, and if any subgroups are considered in the analysis, they have sufficient representation in the data. The data should also include all relevant information for whatever claim and product the model is being used for (ex: age is required to make a model for heath insurance premiums). I will also add a warning to the user against using proxy variables, which are a common source of bias.
 
-What decisions does the user need to be prepared to make on the fly?
+Missing values need to be handled carefully since they can easily introduce bias in insurance data (missing values being more common for low-income applicants). The preferred method of handling missing data is imputation. Having independent observations and comparability between groups are also important. I will make a subsections such about assumptions being made in the data for the user to read, since there are quite a few. Some of the tests and methods I use assume normality, so I will include a way for users to test and confirm their data is normal.
 
-What questions should the user ask of the "first draft" of the product? What adjustments may need to be made?
+**What are the basic components of the task? - Outline these in a bit more detail**
 
+Here are the rough steps I am working with right now:
 
-## Additional Guidance 
+1.  Understanding your data and model: definition of terms, going over data assumptions, code for visualization of data and model, understanding check, an advanced user can probably skip this
+2.  What is bias and why do we care: explaining what different kinds of bias show up in the actuarial field and how they affect products, briefly explain the more mathematical approach to bias, define some actuarial terms commonly used
+3.  First steps of bias analysis: consider what to look for in the data, code for different fairness/bias metrics (disparate impact, mean difference), interpreting results found
+4.  Addressing bias in models: deciding which method is appropriate to use if bias is found, code for editing weights of coefficients, code for regularization of a sensitive variable
+5.  Evaluating new models: after adjusting the model to address bias we need to look at what changed and if it actually improved the model or not, highlight on understanding these results and what they mean for the user's data, understanding reasons why decreasing bias may decrease accuracy, measures of model quality
+6.  Next Steps: recommending further steps if the model still needs improvement
 
-Your check-in should answer these basic questions (and similar concerns that apply more directly to your topic). 
+Each step will accompanied by an example that walks through these steps to help the user's understanding of the code and interpretation.
 
-Once you've completed the check-in, you can use this section to jump-start an introduction/set-up/getting started section in your user guide. 
-This document should remain as an appendix to your main report. 
+**What decisions does the user need to be prepared to make on the fly?**
+
+What doing bias analysis, a "fairness tree" can be used to guide through the decision process of what is important to us. How are they going to categorize the bias so they know how to move forward? What kind of product is this model going to be used for, and how would bias affect it? I included the example of a fairness tree that was given by @ActuarialViewData. These are some of the important decision the user would need to make. Depending on model results post-bias assessment, the user may need to decide if accuracy or fairness is more important for a product.
+
+![](images/Image 3-4-25 at 7.50 PM.jpeg){width="463"}
+
+**What questions should the user ask of the "first draft" of the product? What adjustments may need to be made?**
+
+Every time a big change is made to the model, the next step is to refit the model and assess the quality (MSE, adjusted R squared, disparate impact, etc). If it's a better fit than before, than great! If the model is not as well fit as is was before, then it means there was a trade off between "fairness" and accuracy in the model. Hopefully this wouldn't happen, but there would need to be some further analysis into the data to understand where that discrepancy is coming from. There are steps I can outline for the user to take if this happens, but I probably won't include a full guide into it depending on how long the guide is already.
+
+## Additional Guidance
+
+Your check-in should answer these basic questions (and similar concerns that apply more directly to your topic).
+
+Once you've completed the check-in, you can use this section to jump-start an introduction/set-up/getting started section in your user guide. This document should remain as an appendix to your main report.
