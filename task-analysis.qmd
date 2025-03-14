@@ -29,7 +29,7 @@ Each step will accompanied by an example that walks through these steps to help 
 
 What doing bias analysis, a "fairness tree" can be used to guide through the decision process of what is important to us. How are they going to categorize the bias so they know how to move forward? What kind of product is this model going to be used for, and how would bias affect it? I included the example of a fairness tree that was given by @ActuarialViewData. These are some of the important decision the user would need to make. Depending on model results post-bias assessment, the user may need to decide if accuracy or fairness is more important for a product.
 
-![](images/Image 3-4-25 at 7.50 PM.jpeg){width="463"}
+![](images/Image%203-4-25%20at%207.50%20PM.jpeg){width="463"}
 
 **What questions should the user ask of the "first draft" of the product? What adjustments may need to be made?**
 

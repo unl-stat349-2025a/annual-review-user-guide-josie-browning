@@ -1,4 +1,16 @@
 # References {.unnumbered}
 
-::: {#refs}
-:::
+::: {https://www.actuary.org/sites/default/files/2023-07/risk_brief_data_bias.pdf}
+::: {https://www.geeksforgeeks.org/data-visualization-in-r/}
+::: {https://r-graph-gallery.com/ggplot2-package.html}
+::: {https://libguides.princeton.edu/R-Visualization}
+::: {https://www.datacamp.com/tutorial/linear-regression-R
+::: {https://www.statology.org/multicollinearity-in-r/}
+::: {https://www.sthda.com/english/articles/40-regression-analysis/163-regression-with-categorical-variables-dummy-coding-essentials-in-r/}
+::: {https://pmc.ncbi.nlm.nih.gov/articles/PMC4148275/}
+::: {https://pmc.ncbi.nlm.nih.gov/articles/PMC3668100/, https://rpubs.com/chibueze99/MissingR}
+::: {https://www.isixsigma.com/normality/dealing-non-normal-data-strategies-and-tools/}
+::: https://medium.com/ibm-data-ai/fairness-in-machine-learning-pre-processing-algorithms-a670c031fba8
+::: {https://holisticai.readthedocs.io/en/latest/getting_started/bias/mitigation/postprocessing.html}
+::: {https://www.geeksforgeeks.org/bias-vs-variance-in-machine-learning/}
+::: {https://kdagiit.medium.com/bagging-and-random-forests-reducing-bias-and-variance-using-randomness-8d516214fe7f}
